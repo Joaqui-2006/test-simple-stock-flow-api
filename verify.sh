@@ -15,11 +15,17 @@ if grep -R "App\\\\Infrastructure" app/Presentation; then
 fi
 echo "OK: Presentation sin acoplamiento a Infrastructure"
 
-echo "=== 3. Verificando pruebas unitarias de Dominio ==="
+echo "=== 3. Verificando Deptrac (Análisis estático de capas Onion) ==="
+if [ -f vendor/bin/deptrac ]; then
+    vendor/bin/deptrac analyse --config-file=depfile.yaml --no-interaction
+    echo "OK: Deptrac completado con 0 violaciones"
+fi
+
+echo "=== 4. Verificando Pruebas Unitarias y de Casos de Uso (PHPUnit) ==="
 if [ -f vendor/bin/phpunit ]; then
     vendor/bin/phpunit
 else
     echo "PHPUnit no instalado en host (se corre en Docker)"
 fi
 
-echo "=== Verificación completada con éxito ==="
+echo "=== Verificación arquitectónica y funcional completada con éxito ==="
