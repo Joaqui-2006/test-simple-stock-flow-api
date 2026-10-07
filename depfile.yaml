@@ -1,0 +1,44 @@
+﻿paths:
+  - ./app
+layers:
+  - name: Domain
+    collectors:
+      - type: bool
+        must:
+          - type: directory
+            value: app/Domain/.*
+        must_not:
+          - type: directory
+            value: app/Domain/Service/.*
+  - name: Application
+    collectors:
+      - type: directory
+        value: app/Application/.*
+  - name: Infrastructure
+    collectors:
+      - type: directory
+        value: app/Infrastructure/.*
+  - name: Presentation
+    collectors:
+      - type: directory
+        value: app/Presentation/.*
+  - name: Bootstrap
+    collectors:
+      - type: directory
+        value: app/Bootstrap/.*
+
+ruleset:
+  Domain: []
+  Application:
+    - Domain
+  Infrastructure:
+    - Application
+    - Domain
+  Presentation:
+    - Application
+    - Domain
+  Bootstrap:
+    - Presentation
+    - Infrastructure
+    - Application
+    - Domain
