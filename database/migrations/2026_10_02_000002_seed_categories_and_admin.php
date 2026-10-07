@@ -14,8 +14,8 @@ return new class extends Migration
         $categories = [
             ['id' => '2fa85f64-5717-4562-b3fc-2c963f66afa5', 'name' => 'Bebidas'],
             ['id' => '4fa85f64-5717-4562-b3fc-2c963f66afa7', 'name' => 'Snacks'],
-            ['id' => '5fa85f64-5717-4562-b3fc-2c963f66afa8', 'name' => 'PanaderÃ­a'],
-            ['id' => '6fa85f64-5717-4562-b3fc-2c963f66afa9', 'name' => 'LÃ¡cteos'],
+            ['id' => '5fa85f64-5717-4562-b3fc-2c963f66afa8', 'name' => 'Panadería'],
+            ['id' => '6fa85f64-5717-4562-b3fc-2c963f66afa9', 'name' => 'Lácteos'],
             ['id' => '7fa85f64-5717-4562-b3fc-2c963f66afb0', 'name' => 'Abarrotes'],
         ];
 

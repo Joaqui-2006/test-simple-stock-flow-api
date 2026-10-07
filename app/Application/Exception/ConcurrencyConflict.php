@@ -8,7 +8,7 @@ use RuntimeException;
 
 final class ConcurrencyConflict extends RuntimeException
 {
-    public function __construct(string $message = 'Conflicto de concurrencia: el recurso fue modificado por otra transacciÃ³n')
+    public function __construct(string $message = 'Conflicto de concurrencia: el recurso fue modificado por otra transacción')
     {
         parent::__construct($message);
     }

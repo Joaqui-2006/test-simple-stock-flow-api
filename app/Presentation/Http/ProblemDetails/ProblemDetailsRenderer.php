@@ -16,7 +16,7 @@ final class ProblemDetailsRenderer
 {
     public static function render(Throwable $e): JsonResponse|Response
     {
-        // Regla: 401, 403, 404, 405 -> cuerpo vacÃ­o con Content-Length: 0
+        // Regla: 401, 403, 404, 405 -> cuerpo vacío con Content-Length: 0
         if ($e instanceof HttpExceptionInterface) {
             $status = $e->getStatusCode();
             if (in_array($status, [401, 403, 404, 405], true)) {
@@ -44,18 +44,18 @@ final class ProblemDetailsRenderer
             ], 409, ['Content-Type' => 'application/problem+json']);
         }
 
-        // 400: Error de validaciÃ³n de formato
+        // 400: Error de validación de formato
         if ($e instanceof ValidationException) {
             return response()->json([
                 'type' => 'about:blank',
                 'title' => 'Bad Request',
                 'status' => 400,
-                'detail' => 'La solicitud contiene errores de validaciÃ³n de formato',
+                'detail' => 'La solicitud contiene errores de validación de formato',
                 'errors' => $e->errors(),
             ], 400, ['Content-Type' => 'application/problem+json']);
         }
 
-        // 500: ExcepciÃ³n no controlada (no filtrar detalles internos)
+        // 500: Excepción no controlada (no filtrar detalles internos)
         return response()->json([
             'type' => 'about:blank',
             'title' => 'Internal Server Error',

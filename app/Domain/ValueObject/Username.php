@@ -14,7 +14,7 @@ final class Username
     {
         $normalized = strtolower(trim($raw));
         if ($normalized === '') {
-            throw new InvalidArgumentException('El nombre de usuario no puede estar vacÃ­o');
+            throw new InvalidArgumentException('El nombre de usuario no puede estar vacío');
         }
         $this->value = $normalized;
     }

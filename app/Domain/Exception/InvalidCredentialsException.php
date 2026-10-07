@@ -6,7 +6,7 @@ namespace App\Domain\Exception;
 
 final class InvalidCredentialsException extends BusinessRuleViolation
 {
-    public function __construct(string $message = 'Credenciales de acceso no vÃ¡lidas')
+    public function __construct(string $message = 'Credenciales de acceso no válidas')
     {
         parent::__construct($message);
     }

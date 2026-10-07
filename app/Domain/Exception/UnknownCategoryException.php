@@ -8,6 +8,6 @@ final class UnknownCategoryException extends BusinessRuleViolation
 {
     public function __construct(string $id)
     {
-        parent::__construct(sprintf('CategorÃ­a desconocida o no vÃ¡lida: %s', $id));
+        parent::__construct(sprintf('Categoría desconocida o no válida: %s', $id));
     }
 }

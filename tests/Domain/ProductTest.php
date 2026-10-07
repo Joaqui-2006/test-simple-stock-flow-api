@@ -31,7 +31,7 @@ final class ProductTest extends TestCase
     {
         $product = new Product(
             new ProductId('p-1'),
-            'CafÃ©',
+            'Café',
             Money::fromNumber(1000, 'COP'),
             10,
             new CategoryId('c-1')
@@ -45,7 +45,7 @@ final class ProductTest extends TestCase
     {
         $product = new Product(
             new ProductId('p-1'),
-            'CafÃ©',
+            'Café',
             Money::fromNumber(1000, 'COP'),
             3,
             new CategoryId('c-1')

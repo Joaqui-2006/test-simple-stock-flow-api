@@ -27,7 +27,7 @@ final class ReportController
                 'type' => 'about:blank',
                 'title' => 'Bad Request',
                 'status' => 400,
-                'detail' => 'Los parÃ¡metros from y to son obligatorios para consultar el reporte',
+                'detail' => 'Los parámetros from y to son obligatorios para consultar el reporte',
                 'errors' => [
                     'from' => ['Fecha inicial requerida en formato ISO'],
                     'to' => ['Fecha final requerida en formato ISO']

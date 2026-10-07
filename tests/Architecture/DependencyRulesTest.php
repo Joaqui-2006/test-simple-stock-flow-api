@@ -25,7 +25,7 @@ final class DependencyRulesTest extends TestCase
                 $this->assertStringNotContainsString(
                     'Illuminate\\',
                     $content,
-                    sprintf('ViolaciÃ³n R-01 detectada en: %s', $file->getPathname())
+                    sprintf('Violación R-01 detectada en: %s', $file->getPathname())
                 );
             }
         }
@@ -45,7 +45,7 @@ final class DependencyRulesTest extends TestCase
                 $this->assertStringNotContainsString(
                     'App\\Infrastructure',
                     $content,
-                    sprintf('ViolaciÃ³n R-03 detectada en: %s', $file->getPathname())
+                    sprintf('Violación R-03 detectada en: %s', $file->getPathname())
                 );
             }
         }
