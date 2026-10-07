@@ -1,4 +1,4 @@
-﻿# test-simple-stock-flow-api
+# test-simple-stock-flow-api
 
 > **Prueba tÃ©cnica Â· Ficha ADSO 3413974**  
 > Backend en PHP con Laravel 11 implementado bajo Arquitectura Onion.
