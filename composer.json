@@ -1,4 +1,4 @@
-﻿{
+{
     "name": "code-sena/test-simple-stock-flow-api",
     "type": "project",
     "description": "Backend en PHP (Laravel) para Simple Stock Flow en Arquitectura Onion",

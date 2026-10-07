@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 set -e
 
 echo "=== 1. Verificando Regla R-01 (Domain sin Illuminate) ==="

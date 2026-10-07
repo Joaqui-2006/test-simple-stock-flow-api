@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 use App\Presentation\Http\ProblemDetails\ProblemDetailsRenderer;
 use App\Presentation\Middleware\CorrelationIdMiddleware;
