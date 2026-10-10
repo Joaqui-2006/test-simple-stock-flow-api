@@ -21,7 +21,7 @@ return new class extends Migration
 
         DB::table('categories')->insert($categories);
 
-        // Seed initial Admin with password hash from password_hash
+        // Seed initial Admin
         $adminId = 'c1a2b3c4-d5e6-7f8a-9b0c-1d2e3f4a5b6c';
         DB::table('users')->insert([
             'id' => $adminId,
@@ -29,11 +29,27 @@ return new class extends Migration
             'password_hash' => password_hash('Admin12345!', PASSWORD_DEFAULT),
             'role' => 'admin',
         ]);
+
+        // Seed initial Sellers
+        DB::table('users')->insert([
+            [
+                'id' => '4fc8dc39-f305-47d4-b737-c10bf37b3d28',
+                'username' => 'vendedor1',
+                'password_hash' => password_hash('Seller12345!', PASSWORD_DEFAULT),
+                'role' => 'seller',
+            ],
+            [
+                'id' => '7ca8cbd7-4e03-424d-abae-490f4f9dd989',
+                'username' => 'vendedor_demo',
+                'password_hash' => password_hash('Seller12345!', PASSWORD_DEFAULT),
+                'role' => 'seller',
+            ],
+        ]);
     }
 
     public function down(): void
     {
-        DB::table('users')->where('username', 'admin')->delete();
+        DB::table('users')->whereIn('username', ['admin', 'vendedor1', 'vendedor_demo'])->delete();
         DB::table('categories')->truncate();
     }
 };
